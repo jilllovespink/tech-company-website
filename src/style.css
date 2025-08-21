@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* === Design Tokens (Tailwind v4 @theme) === */
+@theme {
+  --color-primary: #d9a200; /* 金黃：Primary */
+  --color-accent: #008cff; /* 藍光：點綴 */
+  --color-text: #1a1a1a; /* 主文字：黑灰 */
+  --color-muted: #4a4a4a; /* 次要文字/說明 */
+  --color-background: #ffffff; /* 網站背景（白） */
+  --color-surface: #f7f7f8; /* 區塊/卡片底色（很淺的灰） */
+  --color-secondary: #121212; /* 深灰：少量強對比元素 */
+  --color-border: #e5e7eb; /* 淺灰邊框 */
+}
+
+/* === 全站基底（白底＋黑灰字） === */
+:root {
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+/* 連結預設樣式（點綴藍光） */
+a {
+  @apply text-accent hover:underline;
+}
+
+/* 無障礙：明顯的聚焦外框（藍光） */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* 常用容器 */
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+/* Primary Button：金黃底、深灰字；hover 稍微變暗 */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded px-5 py-2 font-medium transition;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+}
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--color-primary) 85%, black 15%);
+}
+
+/* Secondary Button（藍光描邊） */
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded px-5 py-2 font-medium transition border;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+.btn-secondary:hover {
+  background: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+/* 表單輸入欄位 */
+.input {
+  @apply w-full rounded border px-3 py-2 transition;
+  background: var(--color-background);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+.input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* 卡片/區塊 */
+.card {
+  @apply rounded-lg border;
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+/* 區塊標題與次要說明 */
+.section-title {
+  @apply text-2xl md:text-3xl font-semibold;
+  color: var(--color-text);
+}
+.section-subtle {
+  @apply text-sm;
+  color: var(--color-muted);
+}
