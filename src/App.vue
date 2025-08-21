@@ -8,18 +8,15 @@
     >
       跳到主要內容
     </a>
-    <SiteHeader />
-    <main
-      id="content"
-      class="flex-1"
-    >
+    <Header />
+    <main id="content" class="flex-1">
       <RouterView />
     </main>
-    <SiteFooter />
+    <Footer />
   </div>
 </template>
 
 <script setup>
-import SiteHeader from './components/SiteHeader.vue'
-import SiteFooter from './components/SiteFooter.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 </script>
