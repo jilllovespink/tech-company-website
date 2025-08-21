@@ -11,6 +11,10 @@
     "lint:fix": "eslint --fix \"src/**/*.{js,vue}\""
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@vee-validate/i18n": "^4.15.1",
+    "@vee-validate/rules": "^4.15.1",
+    "vee-validate": "^4.15.1",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },

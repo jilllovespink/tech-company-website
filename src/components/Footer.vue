@@ -1,79 +1,83 @@
 <template>
   <footer class="border-t border-border mt-12">
-    <div class="container py-10 grid gap-8 md:grid-cols-2">
-      <!-- 公司資訊 -->
+    <!-- 上半：Logo / 公司簡介 + 聯絡資訊 / 公司資訊 -->
+    <div class="container py-10 grid gap-10 md:grid-cols-2">
+      <!-- 左：Logo + 公司簡介 -->
       <div>
-        <div class="flex items-center gap-2 mb-3">
-          <span
-            class="inline-block w-6 h-6 rounded bg-primary"
-            aria-hidden="true"
-          />
-          <h3 class="text-lg font-semibold">
-            TechCorp 科技股份有限公司
-          </h3>
-        </div>
-        <ul class="space-y-1 text-sm text-muted">
-          <li>統一編號：12345678</li>
-          <li>地址：台北市信義區市府路 1 號</li>
-          <li>電話：02-1234-5678</li>
-          <li>Email：contact@techcorp.com</li>
-        </ul>
+        <img :src="logoUrl" alt="博恩科技有限公司 Logo" class="h-16 w-auto" />
+        <p class="mt-4 text-muted leading-7">
+          引領數位轉型的創新科技解決方案公司。我們透過尖端的人工智慧、
+          網路安全與雲端運算服務，協助企業發揮最大潛能。
+        </p>
       </div>
 
-      <!-- 快速連結 -->
-      <div class="md:justify-self-end">
-        <h4 class="text-base font-semibold mb-3">
-          快速連結
-        </h4>
-        <ul class="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
-          <li>
-            <RouterLink
-              to="/about"
-              class="hover:text-accent"
-            >
-              關於我們
-            </RouterLink>
-          </li>
-          <li>
-            <RouterLink
-              to="/tech"
-              class="hover:text-accent"
-            >
-              產品技術
-            </RouterLink>
-          </li>
-          <li>
-            <RouterLink
-              to="/faq"
-              class="hover:text-accent"
-            >
-              常見問題
-            </RouterLink>
-          </li>
-          <li>
-            <RouterLink
-              to="/contact"
-              class="hover:text-accent"
-            >
-              聯絡我們
-            </RouterLink>
-          </li>
-        </ul>
+      <!-- 右：聯絡資訊 + 公司資訊 -->
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- 聯絡資訊 -->
+        <section aria-labelledby="footer-contact">
+          <h3 id="footer-contact" class="text-base font-semibold">聯絡資訊</h3>
+          <ul class="mt-3 space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-phone text-primary mt-1"></i>
+              <span class="text-text">+886 2 1234-5678</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-envelope text-primary mt-1"></i>
+              <a
+                href="mailto:contact@bornetech.com.tw"
+                class="text-text hover:underline"
+              >
+                contact@bornetech.com.tw
+              </a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+              <div class="text-text leading-relaxed">
+                高雄市鳳山區漁村街65巷1號1樓
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 公司資訊 -->
+        <section aria-labelledby="footer-company">
+          <h3 id="footer-company" class="text-base font-semibold">公司資訊</h3>
+          <ul class="mt-3 space-y-2">
+            <li class="flex gap-2">
+              <span class="text-primary">公司名稱：</span>
+              <span class="text-text">柏恩科技有限公司</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-primary">統一編號：</span>
+              <span class="text-text">83297083</span>
+            </li>
+            <!-- 依需求：不顯示成立年份 -->
+          </ul>
+        </section>
       </div>
     </div>
 
+    <!-- 下半：版權列 -->
     <div class="border-t border-border">
       <div
-        class="container py-4 text-sm text-muted flex items-center justify-between"
+        class="container py-4 text-sm flex flex-col md:flex-row items-center justify-between gap-2"
       >
-        <span>© {{ new Date().getFullYear() }} TechCorp. All rights reserved.</span>
-        <span>Powered by
-          <span class="text-primary font-medium">YourName</span></span>
+        <span class="text-muted">
+          © 2025 博恩科技有限公司 · Designed by
+          <span class="text-text">DJ網頁設計</span>
+        </span>
+        <span class="text-text">技術創新・品質卓越</span>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup>
-// 無邏輯
+const props = defineProps({
+  logoUrl: {
+    type: String,
+    default:
+      'https://firebasestorage.googleapis.com/v0/b/course-platform-3fe65.firebasestorage.app/o/bornw%2FLOGO1.png?alt=media&token=748ce257-568c-4c07-aaa2-1680954c211c'
+  }
+})
 </script>

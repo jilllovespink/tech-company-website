@@ -1,25 +1,39 @@
 <template>
   <div>
-    <!-- Hero / Banner -->
-    <section class="container py-16 md:py-20">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
-            以 <span class="text-primary">金黃創新</span> 驅動未來科技
-          </h1>
-          <p class="mt-4 text-muted max-w-prose">
-            我們致力於以高效率與穩定可靠的產品，協助企業啟動智慧轉型。
+    <section class="relative w-full min-h-[70vh] md:min-h-[80vh] isolate">
+      <!-- 背景圖 -->
+      <div
+        class="absolute inset-0 bg-center bg-cover"
+        :style="{ backgroundImage: `url('${heroUrl}')` }"
+        aria-hidden="true"
+      ></div>
+
+      <!-- 左側加深的透明遮罩，提升文字可讀性 -->
+      <div
+        class="absolute inset-0 bg-black/20 lg:bg-gradient-to-r from-black/20 via-black/5 to-transparent"
+      ></div>
+
+      <!-- 內容 -->
+      <div class="relative container h-full flex items-center py-16 md:py-24">
+        <div class="max-w-2xl">
+          <!-- 小標（可改成你要的 slogan） -->
+          <p class="text-white/85 text-base md:text-lg">
+            從設計到製造・提供客製化服務
           </p>
-          <div class="mt-6 flex gap-3">
-            <RouterLink to="/contact" class="btn-primary">
-              聯絡我們
-            </RouterLink>
-            <RouterLink to="/tech" class="btn-secondary"> 瞭解技術 </RouterLink>
+
+          <!-- 主標 -->
+          <h1
+            class="mt-2 text-white text-4xl md:text-6xl font-semibold leading-tight"
+          >
+            高品質<br class="hidden md:block" />
+            自動化設備的專家
+          </h1>
+
+          <!-- CTA -->
+          <div class="mt-8 flex flex-wrap gap-3">
+            <RouterLink to="/contact" class="btn-primary">聯絡我們</RouterLink>
+            <RouterLink to="/tech" class="btn-secondary">瞭解技術</RouterLink>
           </div>
-        </div>
-        <div class="card h-56 md:h-72 flex items-center justify-center">
-          <!-- 可放產品示意圖/插畫 -->
-          <span class="text-muted">Banner 佔位圖</span>
         </div>
       </div>
     </section>
@@ -95,5 +109,7 @@
 </template>
 
 <script setup>
-// 靜態頁面骨架
+
+const heroUrl =
+  'https://firebasestorage.googleapis.com/v0/b/course-platform-3fe65.firebasestorage.app/o/bornw%2Fpexels-youn-seung-jin-36101845-32778341.jpg?alt=media&token=097dad57-47d9-492e-ab66-6c5389019ab4'
 </script>

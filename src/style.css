@@ -42,17 +42,18 @@ a {
 
 /* Primary Button：金黃底、深灰字；hover 稍微變暗 */
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded px-5 py-2 font-medium transition;
+  @apply inline-flex items-center justify-center rounded px-5 py-2 font-bold transition;
   background: var(--color-primary);
   color: var(--color-secondary);
 }
 .btn-primary:hover {
   background: color-mix(in srgb, var(--color-primary) 85%, black 15%);
+  color: var(--color-background);
 }
 
 /* Secondary Button（藍光描邊） */
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded px-5 py-2 font-medium transition border;
+  @apply inline-flex items-center justify-center rounded px-5 py-2 font-bold transition border;
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
