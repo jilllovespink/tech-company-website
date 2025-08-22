@@ -1,5 +1,4 @@
 <template>
-  <!-- 去掉上下 padding：讓左圖從 header 下方開始 -->
   <section class="w-full py-0 -mb-12">
     <div
       class="grid md:grid-cols-3 gap-8 items-stretch min-h-[calc(100vh-64px)]"
@@ -18,8 +17,18 @@
       </div>
 
       <!-- 右：聯絡我們表單（2/3） -->
-      <div class="md:col-span-2 px-6 md:px-10">
+      <div class="md:col-span-2 px-6 md:px-10 pb-8">
         <ContactForm bare @submit="handleSubmit" />
+        <div
+          class="mt-8 bg-surface border-l-8 px-5 py-4"
+          style="border-color: var(--color-primary);"
+        >
+          <p class="text-text leading-relaxed">
+            如需親臨本公司洽談，請於來訪前撥打
+            <a href="tel:07-1234567" class="underline">07-1234567</a>
+            聯繫，以便安排專人接待。
+          </p>
+        </div>
       </div>
     </div>
   </section>

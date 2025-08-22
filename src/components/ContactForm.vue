@@ -1,5 +1,8 @@
 <template>
-  <section class="container py-12">
+  <component
+    :is="bare ? 'div' : 'section'"
+    :class="bare ? 'pt-8 pb-0' : 'container py-12'"
+  >
     <h1 class="text-4xl md:text-5xl font-semibold">
       立即<span class="text-primary">聯絡我們</span>
     </h1>
@@ -10,7 +13,7 @@
 
     <!-- 表單 -->
     <Form
-      class="mt-8 flex flex-col gap-6 min-h-[560px]"
+      class="mt-8 flex flex-col gap-6"
       :validation-schema="schema"
       @submit="onSubmit"
       v-slot="{ isSubmitting }"
@@ -37,13 +40,13 @@
 
         <!-- 公司名稱（選填） -->
         <div>
-          <label class="block mb-2">公司名稱</label>
+          <label class="block mb-2">單位名稱</label>
           <Field
             name="company"
             as="input"
             type="text"
             class="input"
-            placeholder="請輸入公司名稱"
+            placeholder="請輸入單位名稱"
           />
           <ErrorMessage
             name="company"
@@ -68,7 +71,9 @@
 
         <!-- 連絡電話（只能輸入數字；可留空） -->
         <div>
-          <label class="block mb-2">聯絡電話</label>
+          <label class="block mb-2"
+            >聯絡電話 <span class="text-primary">*</span></label
+          >
           <Field
             name="phone"
             as="input"
@@ -76,7 +81,7 @@
             inputmode="numeric"
             pattern="\\d*"
             class="input"
-            placeholder="09xx-xxx-xxx"
+            placeholder="若為公司電話請留下分機"
             @input="digitsOnly"
           />
           <ErrorMessage name="phone" class="text-red-600 text-sm mt-1 block" />
@@ -112,6 +117,9 @@
         />
         <ErrorMessage name="message" class="text-red-600 text-sm mt-1 block" />
       </div>
+      <!-- <p class="text-center text-sm text-muted">
+        * 必填欄位。我們將於收到表單後盡速回覆您。
+      </p> -->
 
       <!-- 送出 -->
       <div class="self-end mt-4">
@@ -119,13 +127,8 @@
           {{ isSubmitting ? '送出中…' : '確認送出' }}
         </button>
       </div>
-
-      <!-- 註記 -->
-      <p class="text-center text-sm text-muted">
-        * 必填欄位。我們將於收到表單後盡速回覆您。
-      </p>
     </Form>
-  </section>
+  </component>
 </template>
 
 <script setup>
@@ -136,7 +139,6 @@ import { computed } from 'vue'
 // 註冊規則
 defineRule('required', required)
 defineRule('email', email)
-// phone：允許空值；若有輸入則必須為數字
 defineRule('numeric', numeric)
 
 // 驗證規則（Yup 不是必須，這裡用物件描述）
@@ -144,7 +146,7 @@ const schema = computed(() => ({
   fullName: 'required',
   company: 'required',
   email: 'required|email',
-  phone: 'numeric',         // 可留空；若有輸入則須為數字
+  phone: 'required|numeric',
   serviceType: '',
   message: 'required|min:1',
   startDate: ''
@@ -164,4 +166,7 @@ async function onSubmit(values, { resetForm }) {
   emit('submit', values)
   resetForm()
 }
+const props = defineProps({
+  bare: { type: Boolean, default: false }
+})
 </script>

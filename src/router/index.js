@@ -20,7 +20,7 @@ const router = createRouter({
       path: "/product",
       name: "product",
       component: ProductView,
-      meta: { title: "產品技術" },
+      meta: { title: "技術服務" },
     },
     {
       path: "/faq",
@@ -42,7 +42,9 @@ const router = createRouter({
 
 // 可選：動態設定頁標題
 router.afterEach((to) => {
-  document.title = to.meta.title ? `${to.meta.title} | TechCorp` : "TechCorp";
+  document.title = to.meta.title
+    ? `${to.meta.title} | 柏恩科技 - 自動化設備的專家`
+    : "柏恩科技";
 });
 
 export default router;

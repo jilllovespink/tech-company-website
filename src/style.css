@@ -44,7 +44,7 @@ a {
 .btn-primary {
   @apply inline-flex items-center justify-center rounded px-5 py-2 font-bold transition;
   background: var(--color-primary);
-  color: var(--color-secondary);
+  color: var(--color-text);
 }
 .btn-primary:hover {
   background: color-mix(in srgb, var(--color-primary) 85%, black 15%);

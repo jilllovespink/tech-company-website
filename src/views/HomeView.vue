@@ -32,7 +32,9 @@
           <!-- CTA -->
           <div class="mt-8 flex flex-wrap gap-3">
             <RouterLink to="/contact" class="btn-primary">聯絡我們</RouterLink>
-            <RouterLink to="/tech" class="btn-secondary">瞭解技術</RouterLink>
+            <RouterLink to="/product" class="btn-secondary"
+              >瞭解技術</RouterLink
+            >
           </div>
         </div>
       </div>

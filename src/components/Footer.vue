@@ -4,7 +4,7 @@
     <div class="container py-10 grid gap-10 md:grid-cols-2">
       <!-- 左：Logo + 公司簡介 -->
       <div>
-        <img :src="logoUrl" alt="博恩科技有限公司 Logo" class="h-16 w-auto" />
+        <img :src="logoUrl" alt="柏恩科技有限公司 Logo" class="h-8 w-auto" />
         <p class="mt-4 text-muted leading-7">
           引領數位轉型的創新科技解決方案公司。我們透過尖端的人工智慧、
           網路安全與雲端運算服務，協助企業發揮最大潛能。
@@ -63,8 +63,8 @@
         class="container py-4 text-sm flex flex-col md:flex-row items-center justify-between gap-2"
       >
         <span class="text-muted">
-          © 2025 博恩科技有限公司 · Designed by
-          <span class="text-text">DJ網頁設計</span>
+          © 2025 柏恩科技有限公司 · Designed by
+          <span class="text-text">DJ 網頁設計</span>
         </span>
         <span class="text-text">技術創新・品質卓越</span>
       </div>
