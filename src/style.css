@@ -94,3 +94,38 @@ a {
   @apply text-sm;
   color: var(--color-muted);
 }
+
+/* === Loader 動畫 === */
+
+/* 左→右顯影（像書寫） */
+@keyframes reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  } /* 右側被裁掉 100% */
+  100% {
+    clip-path: inset(0 0 0 0);
+  } /* 全顯示 */
+}
+
+/* 掃描亮線（視覺加分） */
+@keyframes scanner {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+/* 將動畫封裝成 Tailwind 工具類別 */
+@utility animate-reveal {
+  animation: reveal 0.3s steps(40, end) alternate both;
+}
+@utility animate-scanner {
+  animation: scanner 0.6s ease-in-out both;
+}

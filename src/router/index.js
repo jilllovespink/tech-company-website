@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { useLoaderStore } from "../stores/loader";
 
 const HomeView = () => import("../views/HomeView.vue");
 const AboutView = () => import("../views/AboutView.vue");
@@ -45,6 +46,17 @@ router.afterEach((to) => {
   document.title = to.meta.title
     ? `${to.meta.title} | 柏恩科技 - 自動化設備的專家`
     : "柏恩科技";
+});
+
+router.beforeEach((to, from, next) => {
+  const loader = useLoaderStore();
+  loader.show(800);
+  next();
+});
+
+router.afterEach(() => {
+  const loader = useLoaderStore();
+  loader.hide();
 });
 
 export default router;

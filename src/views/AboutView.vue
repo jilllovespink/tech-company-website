@@ -83,7 +83,7 @@
     <div
       class="relative container h-full flex flex-col items-center justify-center text-center py-14 md:py-20"
     >
-      <h2 class="text-white text-4xl md:text-6xl font-semibold tracking-tight">
+      <h2 class="text-white text-3xl md:text-5xl font-semibold tracking-tight">
         需要專人諮詢服務？
       </h2>
 

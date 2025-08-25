@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
 import router from "./router";
+import { createPinia } from "pinia";
 
 import { configure } from "vee-validate";
 import { localize, setLocale } from "@vee-validate/i18n";
@@ -40,4 +41,4 @@ configure({
 
 setLocale("zh_TW");
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(router).use(createPinia()).mount("#app");

@@ -14,9 +14,19 @@
     </main>
     <Footer />
   </div>
+  <!-- 全域 Loading -->
+  <GlobalLoader v-model="visible" alt="Borne Technology 載入中" />
 </template>
 
 <script setup>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import GlobalLoader from './components/GlobalLoader.vue'
+import { useLoaderStore } from './stores/loader'
+import { storeToRefs } from 'pinia'
+
+const loader = useLoaderStore()
+const { visible } = storeToRefs(loader)
+
+// Logo 可換你的正式網址
 </script>
