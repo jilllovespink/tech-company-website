@@ -172,7 +172,7 @@
 <script setup>
 
 const heroUrl =
-  'https://firebasestorage.googleapis.com/v0/b/course-platform-3fe65.firebasestorage.app/o/bornw%2Fpexels-youn-seung-jin-36101845-32778341.jpg?alt=media&token=097dad57-47d9-492e-ab66-6c5389019ab4'
+  'https://firebasestorage.googleapis.com/v0/b/course-platform-3fe65.firebasestorage.app/o/bornw%2Fpexels-tara-winstead-8386440.jpg?alt=media&token=c78b9229-d33a-495c-af04-b12e29f947c7'
 
   const imgCompute  = 'https://firebasestorage.googleapis.com/v0/b/course-platform-3fe65.firebasestorage.app/o/bornw%2Fpexels-luis-gomes-166706-546819.jpg?alt=media&token=03c410cd-52ce-4ea9-91af-d232b000dcb1'
 const imgSecurity = 'https://firebasestorage.googleapis.com/v0/b/course-platform-3fe65.firebasestorage.app/o/bornw%2Fpexels-pixabay-60504%20(1).jpg?alt=media&token=a318cfd9-1a05-47e7-8fd4-5c70f9d0c40c'
