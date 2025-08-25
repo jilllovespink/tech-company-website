@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-t border-border mt-12">
+  <footer class="border-t border-border mt-12 bg-surface">
     <!-- 上半：Logo / 公司簡介 + 聯絡資訊 / 公司資訊 -->
     <div class="container py-10 grid gap-10 md:grid-cols-2">
       <!-- 左：Logo + 公司簡介 -->

@@ -17,7 +17,7 @@
       <div class="relative container h-full flex items-center py-16 md:py-24">
         <div class="max-w-2xl">
           <!-- 小標（可改成你要的 slogan） -->
-          <p class="text-white/85 text-base md:text-lg">
+          <p class="text-white/85 text-base font-semibold md:text-lg">
             從設計到製造・提供客製化服務
           </p>
 
