@@ -1,13 +1,9 @@
 # Borne Technology Website (Vue 3 + Vite + Tailwind)
 
-**Live Demo:** https://bornetechtw.netlify.app/
-
 A modern, performant corporate website for **Borne Technology Ltd.**  
 I planned the IA, designed the UI system, and built the site end-to-end with a focus on clean visuals, accessibility, and fast loads.
 
----
-
-## Overview
+# Live Demo: https://bornetechtw.netlify.app/
 
 - **Pages:** Home, About, Technology/Products, FAQ, Contact  
 - **Design:** Tailwind v4 design tokens (brand gold & accent blue), full-bleed banners, feature cards  
@@ -17,7 +13,7 @@ I planned the IA, designed the UI system, and built the site end-to-end with a f
 
 ---
 
-## Key Features
+# Key Features
 
 - **Responsive UI** with consistent spacing and mobile-first layout
 - **ThinBanner** component for internal pages (full-width, image + overlay)
@@ -28,16 +24,7 @@ I planned the IA, designed the UI system, and built the site end-to-end with a f
 
 ---
 
-## Tech Stack
-
-- **Vue 3**, **Vite**, **Pinia**, **Vue Router**
-- **Tailwind CSS v4** (`@theme` tokens), **Font Awesome**
-- **vee-validate** (+ rules)
-- **Netlify** (CI/CD & SPA redirects)
-
----
-
-## Quick Start
+# Quick Start
 
 ```bash
 # install
@@ -49,3 +36,14 @@ npm run dev
 # production build
 npm run build
 npm run preview
+```
+
+---
+
+# Tech Stack
+
+- **Vue 3**, **Vite**, **Pinia**, **Vue Router**
+- **Tailwind CSS v4** (`@theme` tokens), **Font Awesome**
+- **vee-validate** (+ rules)
+- **Netlify** (CI/CD & SPA redirects)
+
