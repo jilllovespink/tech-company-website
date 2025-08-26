@@ -36,7 +36,7 @@ Pages include **Home**, **About**, **Technology/Products**, **FAQ**, and **Conta
 ---
 
 ## 🗂️ Project Structure (key parts)
-
+```
 src/
 ├─ assets/ # static assets (images, etc.)
 ├─ components/
@@ -58,7 +58,7 @@ src/
 │ └─ index.js # beforeEach/afterEach → loader.show/hide
 ├─ style.css # Tailwind v4 + tokens + utilities
 └─ main.js # app bootstrap
-
+```
 ## 🎨 Design Tokens (Tailwind v4)
 
 Defined in `src/style.css`:
