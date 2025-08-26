@@ -28,15 +28,6 @@ I planned the IA, designed the UI system, and built the site end-to-end with a f
 
 ---
 
-## Tech Stack
-
-- **Vue 3**, **Vite**, **Pinia**, **Vue Router**
-- **Tailwind CSS v4** (`@theme` tokens), **Font Awesome**
-- **vee-validate** (+ rules)
-- **Netlify** (CI/CD & SPA redirects)
-
----
-
 ## Quick Start
 
 ```bash
@@ -49,3 +40,13 @@ npm run dev
 # production build
 npm run build
 npm run preview
+
+---
+
+## Tech Stack
+
+- **Vue 3**, **Vite**, **Pinia**, **Vue Router**
+- **Tailwind CSS v4** (`@theme` tokens), **Font Awesome**
+- **vee-validate** (+ rules)
+- **Netlify** (CI/CD & SPA redirects)
+
