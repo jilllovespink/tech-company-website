@@ -6,6 +6,7 @@ const AboutView = () => import("../views/AboutView.vue");
 const ProductView = () => import("../views/ProductView.vue");
 const FAQView = () => import("../views/FAQView.vue");
 const ContactView = () => import("../views/ContactView.vue");
+const NotFoundView = () => import("../views/NotFoundView.vue");
 
 const router = createRouter({
   history: createWebHistory(),
@@ -17,6 +18,7 @@ const router = createRouter({
       component: AboutView,
       meta: { title: "關於柏恩" },
     },
+
     {
       path: "/product",
       name: "product",
@@ -34,6 +36,11 @@ const router = createRouter({
       name: "contact",
       component: ContactView,
       meta: { title: "聯絡我們" },
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "NotFound",
+      component: NotFoundView,
     },
   ],
   scrollBehavior() {

@@ -71,7 +71,7 @@ import { useRoute } from 'vue-router'
 
 const nav = [
   { label: '關於我們', to: '/about' },
-  { label: '技術服務', to: '/product' },
+  // { label: '技術服務', to: '/product' },
   { label: '常見問題', to: '/faq' },
   { label: '聯絡我們', to: '/contact' }
 ]

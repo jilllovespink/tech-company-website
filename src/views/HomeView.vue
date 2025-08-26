@@ -3,7 +3,7 @@
     <section class="relative w-full min-h-[70vh] md:min-h-[80vh] isolate">
       <!-- 背景圖 -->
       <div
-        class="absolute inset-0 bg-center bg-cover"
+        class="absolute inset-0 bg-center bg-accent"
         :style="{ backgroundImage: `url('${heroUrl}')` }"
         aria-hidden="true"
       ></div>
